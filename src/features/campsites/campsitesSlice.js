@@ -9,5 +9,9 @@ export const selectALLCampsites = () => {
 // }
 
 export const selectCampsiteById= (Id) => {
-    return CAMPSITES.find((campsite) => campsite.id ===Id);
+    return CAMPSITES.find((campsite) => campsite.id === parseInt(Id));
 };
+
+export const selectFeaturedCampsite = () => {
+    return CAMPSITES.find((campsite) => campsite.featured)
+}
